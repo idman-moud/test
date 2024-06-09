@@ -1,0 +1,75 @@
+<Doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="ze.css">
+			<link rel="stylesheet" href="inscription.css">
+            <link href= 'https://unpkg.com/boxicon@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Ludiflex  login & registration </title>
+</head>
+<header>
+	<img src="logo3.jpg" width="95px" height="98px" align="left">
+   
+		<h1><center>OUR SOCIETY</center></h1>
+
+  <ul>
+	<li>
+		<a href="projet.html">Accueil</a>
+	</li> <li class="active">
+		<a href="insciplearn.html">Inscription</a>
+	</li> <li >
+		<a href="#">Discussion</a>
+	</li>
+	<li>
+		<a href="#">Evenement</a>
+	</li> <li>
+		<a href="#">Actualiter</a>
+	</li>
+  </ul>
+</header>
+<center>
+<form method="POST" action="our.php">
+  <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+		<div class="signup">
+			<form method="POST" action="our.php">
+				<label for="chk" aria-hidden="true">Sign up</label>
+				<input type="text" name="nom" placeholder="Nom" required>
+				<input type="text" name="adresse" placeholder="Adresse" required>
+				<input type="email" name="email" placeholder="Email" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<!-- Ajout du champ pour l'identifiant de la carte nationale -->
+				<input type="text" name="id_carte_nationale" placeholder="Identifiant de la carte nationale" required>
+				<button>Sign up</button>
+			</form>
+		</div>
+		
+			<div class="login">
+				<form method="POST" action="ourlogin.php" >
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="password" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</form>
+</center>
+<footer>
+    
+
+        
+	<h4>Contact: 77156076/ 77454872 <br>
+ Emails : mairamduomaham@gmail.com/idmanidrissmoud@gmail.com</h4>
+ 
+	 
+ 
+ 
+</footer>
+
+<body>
+   
+</body>
+    </html>

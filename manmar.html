@@ -1,0 +1,67 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sliding form</title>
+
+   <!--CSS0 File link-->
+
+    <link rel="stylesheet" type="text/css" href="styleeso.css">
+     <!--java file and library link-->
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script src="script.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     </head>
+     <body>
+        <div class="container" id="container">
+
+             <!--sign up form-->
+
+         <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>create account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="name" name="nom" required />
+                <input type="text" placeholder="adresse" name="adresse" required />
+                <input type="email" placeholder="email" name="email" required />
+                <input type="password" placeholder="password" name="password" required />
+                <button>sign up</button>
+            </form>
+         </div>
+         <!--sign in form-->
+          
+         <form action="#">
+            <h1> sign in</h1>
+            <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> 
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" required />
+        <input type="Password" placeholder="Password" required />
+        <a href="#">forgot your password ?</a>
+        <button>sign in</button>
+
+         </form>
+        </div>
+        <!--card slider-->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-pannel overlay-left">
+                    <h1>welcome back!</h1>
+                    <p>to keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signin">sign in</button>
+                </div>
+                <div class="overlay-pannel overlay-right">
+                    <h1>hello, explorer!</h1>
+                    <p>entrer your personal details and start journey with us</p>
+                    <button class="ghost" id="signup">sign up</button>
+                </div>
+            </div>
+        </div>
+    </body>

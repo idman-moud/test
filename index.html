@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendrier PHP/MySQL</title>
+    <link rel="stylesheet" type="text/css" href="stylee.css">
+</head>
+<body><form action="addevent.php" method="POST">
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <h2>Calendrier d'événements</h2>
+        </div>
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prev">Précédent</button>
+                <h3 id="month-year"></h3>
+                <button id="next">Suivant</button>
+            </div>
+            <div class="calendar-weekdays"></div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="event-form">
+            <h3>Ajouter un événement</h3>
+            <input type="text" id="event-name" name="name" placeholder="Nom de l'événement">
+            <input type="date" id="event-date" name="date">
+            <button onclick="addEvent()">Ajouter</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</form>
+</body>
+</html>

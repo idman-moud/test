@@ -1,0 +1,259 @@
+$bg: #ebeff5;
+$cyan: #3f66ff;
+$blue: #201568;
+$white: #ffffff;
+$gray: #b4afc9;
+$gap: 35px;
+$radius: 12px;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Noto Sans", sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	height: 100vh;
+	width: 100%;
+	background-color: $bg;
+}
+
+.container {
+	position: relative;
+	width: 325px;
+}
+
+.svg-icon {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+	fill: $white;
+}
+
+.login,
+.signup {
+	width: 100%;
+	display: grid;
+	grid-gap: 15px;
+	padding: $gap;
+	border-radius: $radius;
+	box-shadow: 0 0 25px rgba(black, 0.06);
+
+	&__icon {
+		font-size: 1.125rem;
+		font-weight: bold;
+		letter-spacing: -0.025rem;
+		line-height: 1;
+	}
+
+	&__title {
+		margin-bottom: $gap / 2;
+		font-size: 1.424rem;
+		font-weight: bold;
+		letter-spacing: -0.075rem;
+		line-height: 1;
+
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	&__row {
+		display: grid;
+		grid-gap: 8px;
+	}
+
+	&__label {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.79rem;
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	&__input,
+	&__button {
+		height: 40px;
+		font-size: 0.79rem;
+		border-radius: $radius / 1.5;
+		cursor: pointer;
+	}
+
+	&__input {
+		padding: 0 $gap / 2;
+		background-color: transparent;
+	}
+
+	&__button {
+		height: 45px;
+		font-size: 0.702rem;
+		letter-spacing: 0.075rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__link {
+		font-size: 0.702rem;
+		text-align: center;
+		cursor: pointer;
+
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.login {
+	background-color: $white;
+
+	&__icon {
+		color: $cyan;
+	}
+
+	&__title {
+		color: $blue;
+	}
+
+	&__label {
+		color: $blue;
+	}
+
+	&__input,
+	&__button {
+		border: 1px solid $blue;
+		outline-color: $cyan;
+	}
+
+	&__input {
+		color: darken($gray, 30%);
+		caret-color: $cyan;
+
+		&::placeholder {
+			color: darken($gray, 10%);
+		}
+	}
+
+	&__button {
+		background-color: $blue;
+		color: $white;
+	}
+
+	&__link {
+		color: $gray;
+	}
+}
+
+.signup {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 470px;
+	transform-origin: top right;
+	transition: 250ms;
+	background-color: $cyan;
+
+	&__wrapper {
+		width: 100%;
+		display: grid;
+		grid-gap: 15px;
+		visibility: visible;
+		opacity: 1;
+		transition: 250ms cubic-bezier(0.17, 0.67, 0.68, 1.39) 100ms;
+	}
+
+	&__icon {
+		color: $white;
+	}
+
+	&__title {
+		color: $white;
+		text-transform: capitalize;
+	}
+
+	&__row--flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__trigger--fixed {
+		position: absolute;
+		transition: 100ms cubic-bezier(0.17, 0.67, 0.68, 1.39) 400ms;
+		box-shadow: 0 0 20px rgba(black, 0.05);
+	}
+
+	&__label {
+		color: $white;
+	}
+
+	&__input,
+	&__button {
+		border: 1px solid $white;
+		outline-color: $white;
+	}
+
+	&__input {
+		color: rgba($white, 0.85);
+		caret-color: $white;
+
+		&::placeholder {
+			color: rgba($white, 0.5);
+		}
+	}
+
+	&__button {
+		background-color: $white;
+		color: $cyan;
+	}
+
+	&__link {
+		color: rgba($white, 0.85);
+	}
+}
+
+.is-form-open {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	width: 70px;
+	height: 70px;
+	transform: translateY(0);
+	overflow: hidden;
+	border-radius: $radius * 2;
+	transform-origin: top right;
+	transition: 250ms cubic-bezier(0.17, 0.67, 0.68, 1.39) 100ms;
+}
+
+.is-wrapper-open {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(0.85);
+	transition: 250ms;
+}
+
+.is-trigger-hidden {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	right: -100%;
+	transition: 100ms cubic-bezier(0.15, 0.65, 0.65, 1.25);
+}

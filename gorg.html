@@ -1,0 +1,25 @@
+<html>
+    <head><title>chat</title></head>
+    <link reel="stylesheet" href="gorg.css">
+
+<body>
+
+
+<h1>Bienvenue sur notre Forum de Discussion</h1>
+    <p>Connectez-vous pour rejoindre la conversation :</p>
+    <form action="gorg1.php" method="POST">
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Se Connecter</button>
+    </form>
+    <form action="gorgmessag.php" method="post" enctype="multipart/form-data">
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+        <label for="file">Télécharger un fichier, audio ou photo :</label>
+        <input type="file" id="file" name="file">
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
